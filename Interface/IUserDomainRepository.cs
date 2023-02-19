@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Users.Domain;
 using Users.Domain.Entities;
 using Users.Domain.ValueObject;
 
-namespace Users.Domain
+namespace Users.Interface
 {
     public interface IUserDomainRepository
     {

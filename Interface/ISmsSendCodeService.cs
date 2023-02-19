@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Users.Domain.ValueObject;
 
-namespace Users.Domain
+namespace Users.Interface
 {
     public interface ISmsSendCodeService
     {

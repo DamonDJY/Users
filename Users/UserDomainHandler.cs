@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Users.Domain;
 using Users.Infrastructure;
+using Users.Interface;
 
 namespace Users.WebApi
 {

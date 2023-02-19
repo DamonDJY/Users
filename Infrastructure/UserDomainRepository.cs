@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Users.Domain;
 using Users.Domain.Entities;
 using Users.Domain.ValueObject;
+using Users.Interface;
 
 namespace Users.Infrastructure
 {

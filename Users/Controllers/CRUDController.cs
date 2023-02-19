@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Users.Domain;
 using Users.Domain.Entities;
 using Users.Infrastructure;
+using Users.Interface;
 using Users.WebApi.HttpContex;
 using Zack.Commons;
 
