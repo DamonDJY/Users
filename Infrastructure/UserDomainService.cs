@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Users.Domain.Entities;
 using Users.Domain.ValueObject;
+using Users.Interface;
 
 namespace Users.Domain
 {

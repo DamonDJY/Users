@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Users.Domain;
 using Users.Domain.ValueObject;
+using Users.Interface;
 
 namespace Users.Infrastructure
 {

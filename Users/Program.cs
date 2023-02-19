@@ -1,10 +1,14 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using Users.Domain;
 using Users.Infrastructure;
+using Users.Interface;
 using Users.WebApi;
+using Users.WebApi.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,8 +31,20 @@ builder.Services.Configure<MvcOptions>(ops =>
     ops.Filters.Add<UnitOfWorkFilter>();
 });
 
-builder.Services.AddScoped<IUserDomainRepository, UserDomainRepository>();
-builder.Services.AddScoped<ISmsSendCodeService, MockSmsCodeSender>();
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+
+builder.Host.ConfigureContainer<ContainerBuilder>(builder =>{
+
+    builder.RegisterModule<AutoFacModudeRegister>();
+
+});
+
+
+
+
+//builder.Services.AddScoped<IUserDomainRepository, UserDomainRepository>();
+//builder.Services.AddScoped<ISmsSendCodeService, MockSmsCodeSender>();
 builder.Services.AddScoped<UserDomainService>();
 builder.Services.AddDistributedMemoryCache();
 
